@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  oauthToken: "Bearer YOUR_TOKEN"
+  oauthToken: "Bearer BQDuxES827JrsO6X96kR3y9cj7A68UNRkjyrLNxFMSU0sR9DLL0dHeKxAZCTIPg7Gv3IdgDPvcnq3ZB3C4mXE-1ys0eaveiHO_ljd63IzAjFvafSpb1Dx_dSlTLr9C_wgP6jfh47PQ"
 };
 
 /*

@@ -15,23 +15,22 @@ export class SpotifyService {
 
   searchTrack(query: string) {
     const url = `https://api.spotify.com/v1/search?q=${query}&type=track`;
-    const headers = new HttpHeaders({
-      Authorization:
-        'BQBdEm8iclBQ6EWRQjlzkRs6yVQzQT62KdfoHZr_84ZynMoxkuxfOgnOQWBDY-8gESjhT8JNlKCINSeddVrW9qVgRkklapgSDQfP6ryBG4f73NVjpALRN4_rzcexoPTIV3gJ_nrcuQ"'
-    });
-
     let obsTracks = this.http.get(url, { headers });
     return obsTracks;
  //Ritorno un observable ai componenti che richiedono il servizio
   }
-getTrack(id: string) {
+  getTrack(id: string) {
     const url = `https://api.spotify.com/v1/tracks/${id}`;
-    const headers = new HttpHeaders({
-      Authorization:
-        'Bearer TUO_AUTH'
-    });
-
     return this.http.get(url, { headers });
   }
+  getArtist(id: string) {
+    const url = `https://api.spotify.com/v1/artists/${id}`;
+    return this.http.get(url, { headers });
+  }
+  getAlbum(id: string) {
+    const url = `https://api.spotify.com/v1/albums/${id}`;
+    return this.http.get(url, { headers });
+  }
+
 
 }
